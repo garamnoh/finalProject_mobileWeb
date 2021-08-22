@@ -1,0 +1,179 @@
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* 카드가 없는 경우 */
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardBox{
+    width: 100%;
+    
+    display: flex;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardBox>#imgBox{
+	width: 96px;
+	height: 60px;
+    margin-right: 10px;
+	
+	position: relative;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardBox>#imgBox>span{
+	width: 100%;
+	text-align: center;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	font-size: 12px;
+	opacity: .5;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardBox>#imgBox>img.cardImg{
+    width: 96px;
+    height: 60px;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardBox>#textBox{
+	display: flex;
+	flex-direction: column;	
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardBox>#textBox>span{
+	font-size: 12px;
+	font-weight: 600;
+	opacity: .5;
+	margin-bottom: 5px;
+}
+
+
+/* 카드가 있는 경우 */
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardBox>#cardEmpty{
+	border-radius: 3px;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>img#cardImg{
+    width: 96px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardInfoText{
+	width: 100%;
+	
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardInfoText>span#cardBalanceText{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #DDDCDC;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardInfoText>span#cardNumber{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #DDDCDC;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardInfoText>span#cardBalance{
+    width: 100%;
+    
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #000000;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#paymentTypeResult>#cardInfoText>span#cardBalance>#isEnough{
+	color: red;
+	opacity: .5;
+	font-size: 12px;
+}
+
+#chargingIcon{
+	width: 20px;
+	height: 20px;
+	
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+	display: none;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer{
+	width: 100%;
+	
+	display: flex;
+	align-items: center;
+	
+	font-size: 12px;
+	font-weight: 600;
+}
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer>span{
+	margin-right: 10px;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer>label{
+	margin-right: 10px;
+	opacity: .7;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer>input{
+	margin: 0;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer>input#receiptCheckBox{
+	margin-right: 5px;
+	opacity: .7;
+	
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
+	
+	width: 13px;
+	height: 13px;
+	border-radius: 3px;
+	border: 1px solid #000000;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer>input#receiptCheckBox:checked{
+	-webkit-border-radius:0;
+	-webkit-appearance:checkbox;
+	
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #000000;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer>input#receiptInputBox{
+	flex-grow: 1;
+	
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
+	
+	border: 1px solid #dddcdc;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    margin-right: 0;
+	padding: 5px 10px;
+}
+
+#container>#paymentContainer>#paymentTypeResultContainer>#cashReceiptContainer>input#receiptInputBox:focus{
+	outline: none;
+}

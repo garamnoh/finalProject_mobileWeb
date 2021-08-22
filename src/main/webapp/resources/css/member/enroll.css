@@ -1,0 +1,167 @@
+/* body */
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width: 1000px;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+/* 취소 버튼 */
+#container>#cancel{
+    margin-top: 20px;
+}
+
+#container>#cancel>img{
+    width: 20px;
+    height: 20px;
+}
+
+/* 로고 */
+#container>#logoContainer{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#container>#logoContainer>img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#container>#logoContainer>div#logoText{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#logoContainer>div#logoText>span{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+}
+
+#container>#logoContainer>div#logoText>span:last-child{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+/* 가입 동의 컨테이너 */
+#container>#checkContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+#container>#checkContainer>div.checkBox{
+    height: 40px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container>#checkContainer>div.checkBox>div.checkText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container>#checkContainer>div.checkBox>div.checkText>span{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#checkContainer>div.checkBox>div.checkText>span#subText{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    margin-top: 5px;
+
+    color: #DDDCDC;
+}
+
+#container>#checkContainer>div.checkBox>input[type=checkBox]{
+    display: none;
+}
+
+#container>#checkContainer>div.checkBox>label{
+    display: flex;
+    align-items: center;
+}
+
+#container>#checkContainer>div.checkBox>label>img{
+    width: 25px;
+    height: 25px;
+    opacity: .3;
+}
+
+/* 버튼 컨테이너 */
+#container>#buttonContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    height: 70px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+    background-color: #FFFFFF;
+}
+
+#container>#buttonContainer>div#enrollButton{
+    height: 40px;
+    background-color: #00704A;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    opacity: .3;
+}
+
+#container>#buttonContainer>div#enrollButton>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}
+
+#container>#buttonContainer>div:hover{
+    opacity: .8;
+}
+
+#container>#buttonContainer>div:active{
+    opacity: 1;
+}
+
+/* Line */
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #dddcdc;
+    margin: 10px 0;
+}
+
+/* checked */
+#container>#checkContainer>div.checkBox>label>img.checked{
+    opacity: 1;
+}
+
+#container>#buttonContainer>div#enrollButton.checked{
+    opacity: 1;
+}

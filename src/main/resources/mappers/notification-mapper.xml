@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0/EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace='notification'>
+	<resultMap type='notification' id='notificationMap'>
+		<id property='id' column='ID'/>
+		<result property='orderNo' column='ORDER_NO'/>
+		<result property='notificationTitle' column='NOTIFICATION_TITLE'/>
+		<result property='notificationContent' column='NOTIFICATION_CONTENT'/>
+		<result property='notificationDate' column='NOTIFICATION_DATE'/>
+		<result property='confirmationStatus' column='CONFIRMATION_STATUS'/>
+		<result property='productName' column='PRODUCT_NAME'/>
+	</resultMap>
+	<insert id='addNotification' parameterType='notification'>
+		INSERT INTO NOTIFICATION VALUES (#{id}, #{orderNo}, #{notificationTitle}, #{notificationContent}, #{notificationDate}, 'N', #{productName})
+	</insert>
+	<select id='checkNotification' parameterType='string' resultType='_int'>
+		SELECT COUNT(*) AS COUNT FROM NOTIFICATION WHERE ID=#{id} AND CONFIRMATION_STATUS='N'
+	</select>
+	<update id='changeConfirmationStatus' parameterType='hashmap'>
+		<choose>
+			<when test='orderNo.equals("none")'>
+				UPDATE NOTIFICATION SET CONFIRMATION_STATUS='Y' WHERE ID=#{id}
+			</when>
+			<otherwise>
+				UPDATE NOTIFICATION SET CONFIRMATION_STATUS='Y' WHERE ID=#{id} AND ORDER_NO=#{orderNo}
+			</otherwise>
+		</choose>
+	</update>
+	<select id='getNotification' parameterType='string' resultMap='notificationMap'>
+		SELECT * FROM NOTIFICATION WHERE ID=#{id} AND CONFIRMATION_STATUS='N' ORDER BY NOTIFICATION_DATE DESC
+	</select>
+</mapper>

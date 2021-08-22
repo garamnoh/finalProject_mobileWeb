@@ -1,0 +1,280 @@
+/* 전체 */
+/* #containerHome{
+    width: 1000px;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    margin-bottom: 75px;
+} */
+
+/* 적립 정보(리워드) */
+#container>#rewardContainer{
+    height: 40px;
+    margin: 55px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container>#rewardContainer>#leftContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#container>#rewardContainer>#leftContainer>#rewardTextBox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 2px;
+}
+
+#container>#rewardContainer>#leftContainer>#rewardTextBox>span#rewardCount{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    letter-spacing: -0.24px;
+    color: #000000;
+}
+
+#container>#rewardContainer>#leftContainer>#rewardTextBox>img#star{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+}
+
+#container>#rewardContainer>#leftContainer>#rewardTextBox>span:last-child{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    color: #000000;
+}
+
+#container>#rewardContainer>#leftContainer>div#chart{
+/*     height: 5px;
+    width: 250px;
+    background: #C4C4C4;
+    border-radius: 3px; */
+    height: 10px;
+    width: 230px;
+    position: absolute;
+    top: 25px;
+}
+
+#container>#rewardContainer>#rightContainer{
+    height: 40px;
+    display: flex;
+    align-items: baseline;
+}
+
+#container>#rewardContainer>#rightContainer>span#rewardCountBig{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.24px;
+}
+
+#container>#rewardContainer>#rightContainer>span#split{
+    font-weight: 600;
+    font-size: 20px;
+    color: #DDDCDC;
+    margin: 0 5px;
+}
+
+#container>#rewardContainer>#rightContainer>span#count{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    color: #000000;
+}
+
+#container>#rewardContainer>#rightContainer>img#starBig{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+/* 배너 */
+#container>#bannerContainer{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+    #container>#bannerContainer>img#banner{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 440px){
+    #container>#bannerContainer>img#banner{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+        margin-bottom: 20px;
+    }
+}
+
+/* new product Container */
+#container>#newProductContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#container>#newProductContainer>#newText{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#newProductContainer>#newBox{
+    width: auto;
+    height: 120px;
+    position: relative;
+    overflow: auto;
+    padding: 5px 0;
+}
+
+#container>#newProductContainer>#newBox>#scrollBox{
+    display: flex;
+    position: absolute;
+    padding: 0 2px;
+}
+
+#container>#newProductContainer>#newBox>#scrollBox>#newProduct{
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    width: 80px;
+    margin-right: 10px;
+}
+
+#container>#newProductContainer>#newBox>#scrollBox>#newProduct>img{
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    margin-bottom: 5px;
+}
+
+#container>#newProductContainer>#newBox>#scrollBox>#newProduct>span{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.24px;
+    word-break: keep-all;
+}
+
+/* favorite product Container */
+#container #favoriteContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#container #favoriteContainer>#favoriteText{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container #favoriteContainer>#favoriteBox{
+    width: auto;
+    height: 120px;
+    position: relative;
+    overflow: auto;
+    padding: 5px 0;
+}
+
+#container #favoriteContainer>#favoriteBox>#favoriteScrollBox{
+    display: flex;
+    position: absolute;
+    padding: 0 2px;
+}
+
+#container #favoriteContainer>#favoriteBox>#favoriteScrollBox>#favoriteProduct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    width: 80px;
+    margin-right: 10px;
+}
+
+#container #favoriteContainer>#favoriteBox>#favoriteScrollBox>#favoriteProduct>img{
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 40px;
+    margin-bottom: 5px;
+}
+
+#container #favoriteContainer>#favoriteBox>#favoriteScrollBox>#favoriteProduct>span{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.24px;
+    word-break: keep-all;
+}
+
+/* notice */
+#container>#noticeContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 65px;
+}
+
+#container>#noticeContainer>#noticeText{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#noticeContainer>#noticeBox{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+#container>#noticeContainer>#noticeBox>#noticeItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 49%;
+    margin-top: 5px;
+}
+
+#container>#noticeContainer>#noticeBox>#noticeItem>img{
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#container>#noticeContainer>#noticeBox>#noticeItem>span{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.24px;
+    word-break: keep-all;
+}

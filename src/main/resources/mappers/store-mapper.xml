@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0/EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace='store'>
+	<resultMap type="store" id="storeMap">
+		<id property='storeId' column='STORE_ID'/>
+		<result property='storeName' column='STORE_NAME'/>
+		<result property='storeTel' column='STORE_TEL'/>
+		<result property='storeAddress' column='STORE_ADDRESS'/>
+		<result property='storeImg' column='STORE_IMG'/>
+		<result property='locationLat' column='LOCATION_LAT'/>
+		<result property='locationLng' column='LOCATION_LNG'/>
+		<result property='type' column='TYPE'/>
+		<result property='distance' column='DISTANCE'/>
+	</resultMap>
+	<select id='storeList' parameterType='hashmap' resultMap='storeMap'>
+		<choose>
+			<when test='isMap.equals("true")'>
+				<choose>
+					<when test='!keyword.equals("") or keyword != null'>
+						<choose>
+							<when test='type.equals("all")'>
+								SELECT * FROM (SELECT S.*, FN_DISTANCE(#{latitude}, #{longitude}, LOCATION_LAT, LOCATION_LNG) AS DISTANCE FROM STORE_INFO S) WHERE STORE_NAME LIKE '%'||#{keyword}||'%' ORDER BY DISTANCE
+							</when>
+							<otherwise>
+								SELECT * FROM (SELECT S.*, FN_DISTANCE(#{latitude}, #{longitude}, LOCATION_LAT, LOCATION_LNG) AS DISTANCE FROM STORE_INFO S) WHERE TYPE=#{type} AND STORE_NAME LIKE '%'||#{keyword}||'%' ORDER BY DISTANCE
+							</otherwise>
+						</choose>
+					</when>
+					<otherwise>
+						<choose>
+							<when test='type.equals("all")'>
+								SELECT * FROM (SELECT S.*, FN_DISTANCE(#{latitude}, #{longitude}, LOCATION_LAT, LOCATION_LNG) AS DISTANCE FROM STORE_INFO S) WHERE STORE_NAME LIKE '%'||#{keyword}||'%' AND DISTANCE <![CDATA[<]]> 3000 ORDER BY DISTANCE
+							</when>
+							<otherwise>
+								SELECT * FROM (SELECT S.*, FN_DISTANCE(#{latitude}, #{longitude}, LOCATION_LAT, LOCATION_LNG) AS DISTANCE FROM STORE_INFO S) WHERE TYPE=#{type} AND STORE_NAME LIKE '%'||#{keyword}||'%' AND DISTANCE <![CDATA[<]]> 3000 ORDER BY DISTANCE
+							</otherwise>
+						</choose>
+					</otherwise>
+				</choose>
+			</when>
+			<otherwise>
+				<choose>
+					<when test='type.equals("all")'>
+						SELECT * FROM (SELECT S.*, FN_DISTANCE(#{latitude}, #{longitude}, LOCATION_LAT, LOCATION_LNG) AS DISTANCE FROM STORE_INFO S) WHERE STORE_NAME LIKE '%'||#{keyword}||'%' ORDER BY DISTANCE
+					</when>
+					<otherwise>
+						SELECT * FROM (SELECT S.*, FN_DISTANCE(#{latitude}, #{longitude}, LOCATION_LAT, LOCATION_LNG) AS DISTANCE FROM STORE_INFO S) WHERE TYPE=#{type} AND STORE_NAME LIKE '%'||#{keyword}||'%' ORDER BY DISTANCE
+					</otherwise>
+				</choose>
+			</otherwise>
+		</choose>
+	</select>
+	<select id='storeInfo' parameterType='string' resultMap='storeMap'>
+		SELECT * FROM STORE_INFO WHERE STORE_NAME=#{store}
+	</select>
+</mapper>

@@ -1,0 +1,44 @@
+/* menu list */
+#container>.menuListContainer>.menuList{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#container>.menuListContainer>.menuList>img.menuImg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#container>.menuListContainer>.menuList>div.menuText{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>.menuListContainer>.menuList>div.menuText>span.menuKo{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    margin-bottom: 3px;
+}
+
+#container>.menuListContainer>.menuList>div.menuText>span.menuEn{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    margin-bottom: 3px;
+    color: #DDDCDC;
+}
+
+#container>.menuListContainer>.menuList>div.menuText>span.menuPrice{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}

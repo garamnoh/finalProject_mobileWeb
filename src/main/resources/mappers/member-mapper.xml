@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0/EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace='member'>
+	<resultMap type="member" id="memberMap">
+		<id property='id' column='ID'/>
+		<result property='password' column='PASSWORD'/>
+		<result property='idNo' column='ID_NO'/>
+		<result property='name' column='NAME'/>
+		<result property='email' column='EMAIL'/>
+		<result property='gender' column='GENDER'/>
+		<result property='address' column='ADDRESS'/>
+		<result property='phone' column='PHONE'/>
+		<result property='nickname' column='NICKNAME'/>
+		<result property='enrollDate' column='ENROLL_DATE'/>
+		<result property='cardSeq' column='CARD_SEQ'/>
+		<result property='stars' column='STARS'/>
+		<result property='membership' column='MEMBERSHIP'/>
+		<result property='locationLat' column='LOCATION_LAT'/>
+		<result property='locationLng' column='LOCATION_LNG'/>
+	</resultMap>
+	<resultMap type='favorite' id='favoriteMap'>
+		<id property='favoriteSeq' column='FAVORITE_SEQ'/>
+		<result property='id' column='ID'/>
+		<result property='productId' column='PRODUCT_ID'/>
+	</resultMap>
+	<resultMap type='favoriteList' id='favoriteListMap'>
+		<id property='favoriteSeq' column='FAVORITE_SEQ'/>
+		<result property='id' column='ID'/>
+		<result property='productId' column='PRODUCT_ID'/>
+		<result property='optionId' column='OPTION_ID'/>
+		<result property='productName' column='PRODUCT_NAME'/>
+		<result property='productNameEn' column='PRODUCT_NAME_EN'/>
+		<result property='productPrice' column='PRODUCT_PRICE'/>
+		<result property='category' column='CATEGORY'/>
+		<result property='type' column='TYPE'/>
+		<result property='productImg' column='PRODUCT_IMG'/>
+	</resultMap>
+	<resultMap type='businessMember' id='businessMap'>
+		<id property='businessMemberNo' column='BUSINESS_MEMBER_NO'/>
+		<result property='storeId' column='STORE_ID'/>
+		<result property='password' column='PASSWORD'/>
+		<result property='storeName' column='STORE_NAME'/>
+	</resultMap>
+	<insert id='enrollMember' parameterType='member'>
+		INSERT INTO MEMBER VALUES (#{id}, #{password}, #{idNo}, #{name}, #{email}, #{gender}, #{address}, #{phone}, #{nickname}, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, #{locationLat}, #{locationLng})
+	</insert>
+	<insert id='addRewardsInfo' parameterType='hashmap'>
+		INSERT INTO STARS VALUES (#{id}, #{stars}, DEFAULT)
+	</insert>
+	<select id='confirmIdDuplication' resultMap='memberMap'>
+		SELECT * FROM MEMBER WHERE ID=#{id}
+	</select>
+	<select id='confirmPhoneDuplication' resultMap='memberMap'>
+		SELECT * FROM MEMBER WHERE PHONE=#{phone}
+	</select>
+	<select id='confirmEmailDuplication' resultMap='memberMap'>
+		SELECT * FROM MEMBER WHERE EMAIL=#{email}
+	</select>
+	<select id='searchId' resultType="string">
+		SELECT ID FROM MEMBER WHERE NAME=#{name} AND ID_NO=#{idNo} AND PHONE=${phone}
+	</select>
+	<select id='checkInfo' resultMap='memberMap'>
+		SELECT * FROM MEMBER WHERE ID=#{id} AND EMAIL=#{email}
+	</select>
+	<update id='changePassword' parameterType='member'>
+		UPDATE MEMBER SET PASSWORD=#{password} WHERE ID=#{id}
+	</update>
+	<select id='login' parameterType='member' resultMap="memberMap">
+		SELECT * FROM MEMBER WHERE ID=#{id}
+	</select>
+	<select id='getRewardsInfo' parameterType='string' resultType='_int'>
+		SELECT SUM(STARS) FROM STARS WHERE ID=#{id} AND <![CDATA[(SYSDATE - SAVED_UP_DATE <= 365)]]>
+	</select>
+	<update id='setRewardsInfoToMember' parameterType='hashmap'>
+		UPDATE MEMBER SET STARS=#{stars}, MEMBERSHIP=#{membership} WHERE ID=#{id}
+	</update>
+	<select id='checkKakaoId' resultMap='memberMap'>
+		SELECT * FROM MEMBER WHERE EMAIL=#{email}
+	</select>
+	<delete id='deleteMember' parameterType='member'>
+		DELETE FROM MEMBER WHERE ID=#{id }
+	</delete>
+	<select id='getFavoriteList' resultMap='favoriteListMap'>
+		SELECT * FROM FAVORITE LEFT JOIN PRODUCT_INFO USING (PRODUCT_ID) WHERE ID=#{id}
+	</select>
+	<select id='isFavorite' resultMap='favoriteMap'>
+		SELECT * FROM FAVORITE WHERE ID=#{id} AND PRODUCT_ID=#{productId}
+	</select>
+	<insert id='addToFavoriteList' parameterType='hashmap'>
+		INSERT INTO FAVORITE VALUES (SEQ_FAVORITE.NEXTVAL, #{id}, #{productId})
+	</insert>
+	<delete id='removeFromFavoriteList' parameterType='hashmap'>
+		DELETE FROM FAVORITE WHERE ID=#{id} AND PRODUCT_ID=#{productId}
+	</delete>
+	<select id='getMemberInfo' parameterType='string' resultMap='memberMap'>
+		SELECT * FROM MEMBER WHERE ID=#{id}
+	</select>
+	<select id='checkNickname' parameterType='string' resultMap='memberMap'>
+		SELECT * FROM MEMBER WHERE NICKNAME=#{nickname} 
+	</select>
+	<update id='editNickname' parameterType='hashmap'>
+		UPDATE MEMBER SET NICKNAME=#{nickname} WHERE ID=#{id}
+	</update>
+	<select id='businessMemberLogin' parameterType='businessMember' resultMap='businessMap'>
+		SELECT * FROM BUSINESS_MEMBER WHERE STORE_ID=#{storeId} AND PASSWORD=#{password}
+	</select>
+</mapper>

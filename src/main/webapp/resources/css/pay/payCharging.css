@@ -1,0 +1,260 @@
+/* 카드 정보 */
+#container>#cardContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 55px 0 0 0;
+}
+
+#container>#cardContainer>#chargingText{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 10px;
+}
+
+#container>#cardContainer>#cardInfo{
+    display: flex;
+    align-items: center;
+}
+
+#container>#cardContainer>#cardInfo>img#cardImg{
+    width: 96px;
+    height: 60px;
+    margin-right: 10px;
+}
+#container>#cardContainer>#cardInfo>#cardInfoText{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#cardContainer>#cardInfo>#cardInfoText>span#cardBalanceText{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #DDDCDC;
+}
+
+#container>#cardContainer>#cardInfo>#cardInfoText>span#cardNumber{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #DDDCDC;
+}
+
+#container>#cardContainer>#cardInfo>#cardInfoText>span#cardBalance{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #000000;
+}
+
+/* 충전 금액 */
+#container>#chargingContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#chargingContainer>#chargingPrice{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#container>#chargingContainer>#chargingPrice>span#text{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#chargingContainer>#chargingPrice>span#price{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+#container>#chargingContainer>#chargingBox{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#chargingContainer>#chargingBox>div{
+	width: 100%;
+    height: 26px;
+	
+    display: flex;
+}
+
+#container>#chargingContainer>#chargingBox>div#firstLine{
+    margin-bottom: 10px;
+}
+
+#container>#chargingContainer>#chargingBox>div#firstLine>div{
+	width: 60px;
+	height: 100%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+    border: 1px solid #dddcdc;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+#container>#chargingContainer>#chargingBox>div#firstLine>div:last-child{
+	margin-right: 0;
+}
+
+#container>#chargingContainer>#chargingBox>div#firstLine>div>span{
+	font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+	margin: 0 10px;
+}
+
+#container>#chargingContainer>#chargingBox>div#secondLine>div{
+	height: 100%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+    border: 1px solid #dddcdc;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+#container>#chargingContainer>#chargingBox>div#secondLine>div:first-child{
+	width: 60px;
+}
+
+#container>#chargingContainer>#chargingBox>div#secondLine>div:last-child{
+	width: 70px;
+}
+
+#container>#chargingContainer>#chargingBox>div#secondLine>div>span{
+	font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+	margin: 0 10px;
+}
+
+#container>#chargingContainer>#chargingBox>div#secondLine>#otherPrice{
+	-webkit-border-radius:0;
+	-webkit-appearance:none;
+	height: 28px;	
+    border: 1px solid #dddcdc;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    margin-right: 0;
+	width: calc(100% - 154px);
+	padding: 0 10;
+	
+	display: none;
+}
+
+#container>#chargingContainer>#chargingBox>div#secondLine>#otherPrice:focus{
+	outline: none;
+}
+
+/* 결제 수단 */
+#container>#paymentTypeContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#paymentTypeContainer>span#text{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    margin-bottom: 10px;
+    
+}
+
+#container>#paymentTypeContainer>#paymentType{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#paymentTypeContainer>#paymentType>.radio{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#container>#paymentTypeContainer>#paymentType>.radio>input{
+    margin: 0;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+
+#container>#paymentTypeContainer>#paymentType>.radio>label{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+/* 결제 버튼 */
+#container>#paymentButtonContainer{
+    position: fixed;
+    bottom: 55px;
+    left: 0px;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    height: 90px;
+    box-shadow : 0px -2px 4px rgba(0, 0, 0, 0.25);
+}
+
+#container>#paymentButtonContainer>#paymentTextBox{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+#container>#paymentButtonContainer>#paymentTextBox>span#paymentText{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    color: #DDDCDC;
+}
+
+#container>#paymentButtonContainer>#paymentTextBox>span#paymentPrice{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#paymentButtonContainer>#paymentButton{
+    height: 40px;
+    background: #00704A;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container>#paymentButtonContainer>#paymentButton>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}

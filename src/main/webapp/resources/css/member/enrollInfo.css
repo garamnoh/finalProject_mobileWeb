@@ -1,0 +1,198 @@
+/* body */
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width: 1000px;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+/* 취소 버튼 */
+#container>#cancel{
+    margin: 20px 0;
+}
+
+#container>#cancel>img{
+    width: 20px;
+    height: 20px;
+}
+
+/* 회원 정보 입력 */
+#container>#enrollInfoContainer{
+    display: flex;
+}
+
+#container>#enrollInfoContainer>#enrollInfoTitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+}
+
+/* 회원 정보 상세 */
+#container>#enrollInfoDetail{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+#container>#enrollInfoDetail>.infoBox{
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    
+    position: relative;
+}
+
+#container>#enrollInfoDetail>.infoBox>span.usable,
+#container>#enrollInfoDetail>.infoBox>span.unusable{
+	font-size: 10px;
+	width: 30px;
+	height: auto;
+	
+	text-align: center;
+	
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translate(0, -50%);
+	
+	display: none;
+}
+
+#container>#enrollInfoDetail>.infoBox>span.usable{
+	color: #00704a;
+}
+
+#container>#enrollInfoDetail>.infoBox>span.unusable{
+	color: tomato;
+}
+
+#container>#enrollInfoDetail>.infoBox>input{
+	-webkit-appearance: none;
+	
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+
+    border-radius: 0;
+    border: 1px solid #dddcdc;
+}
+
+#container>#enrollInfoDetail>.infoBox>input:focus{
+    outline: none;
+}
+
+#container>#enrollInfoDetail>#multiBox>input#idNo{
+    width: 100%;
+}
+
+#container>#enrollInfoDetail>#multiBox>span{
+    padding: 0 10px;
+}
+
+#container>#enrollInfoDetail>#multiBox>#genderBox{
+    display: flex;
+    width: 100%;
+}
+
+#container>#enrollInfoDetail>#multiBox>#genderBox>input{
+	-webkit-appearance: none;
+	
+	width: 100%;
+    height: 30px;
+    padding: 0 5px;
+
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+
+    border-radius: 0;
+    border: 1px solid #dddcdc;
+}
+
+#container>#enrollInfoDetail>#multiBox>#genderBox>input:focus{
+	outline: none;
+}
+
+#container>#enrollInfoDetail>#multiBox>#genderBox>input#gender{
+    width: 30px;
+    border-right: 0;
+    text-align: center;
+}
+
+#container>#enrollInfoDetail>#multiBox>#genderBox>input#etc{
+    text-align: center;
+    flex-grow: 1;
+}
+
+#container>#enrollInfoDetail>#addrBox>img{
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+}
+
+#container>#enrollInfoDetail>#enrollSubmit{
+	display: none;
+}
+
+/* 버튼 컨테이너 */
+#container>#buttonContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    height: 70px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+}
+
+#container>#buttonContainer>div#enrollButton{
+    height: 40px;
+    background-color: #00704A;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#container>#buttonContainer>div#enrollButton>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}
+
+#container>#buttonContainer>div:hover{
+    opacity: .8;
+}
+
+#container>#buttonContainer>div:active{
+    opacity: 1;
+}
+
+/* Line */
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #dddcdc;
+    margin: 10px 0;
+}

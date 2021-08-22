@@ -1,0 +1,155 @@
+/* body */
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width: 1000px;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 로고 */
+#container>#logoContainer{
+    margin-bottom: 50px;
+}
+
+#container>#logoContainer>img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#container>#logoContainer>div#logoText{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#logoContainer>div#logoText>span{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+}
+
+#container>#logoContainer>div#logoText>span:last-child{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+/* 로그인 input */
+#container>#loginContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+#container>#loginContainer>input{
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #dddcdc;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    
+    border-radius: 0;
+}
+
+#container>#loginContainer>input:focus{
+    outline: none;
+}
+
+#container>#loginContainer>button#loginSubmitButton{
+	display: none;
+}
+
+/* 아이디 / 비밀번호 찾기, 회원가입 */
+#container>#enrollContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#container>#enrollContainer>.text{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    margin: 0 5px;
+}
+
+#container>#enrollContainer>.text:hover{
+    opacity: .8;
+}
+
+#container>#enrollContainer>.text:active{
+    opacity: 1;
+}
+
+#container>#enrollContainer>.line{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    margin: 0 10px;
+    color: #dddcdc
+}
+
+/* 로그인 버튼 */
+#container>#loginButtonContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#loginButtonContainer>#kakaoLoginButton{
+    height: 40px;
+    background-color: #fee500;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#container>#loginButtonContainer>#kakaoLoginButton>img{
+    width: auto;
+    height: 25px;
+    margin: 0 15px;
+}
+
+#container>#loginButtonContainer>#kakaoLoginButton>img:last-child{
+    opacity: 0;
+}
+
+#container>#loginButtonContainer>#kakaoLoginButton>span{
+    color: #181600;
+}
+
+#container>#loginButtonContainer>div#loginButton{
+    height: 40px;
+    background-color: #00704A;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container>#loginButtonContainer>div#loginButton>span{
+    color: white;
+}
+
+#container>#loginButtonContainer>div:hover{
+    opacity: .8;
+}
+
+#container>#loginButtonContainer>div:active{
+    opacity: 1;
+}

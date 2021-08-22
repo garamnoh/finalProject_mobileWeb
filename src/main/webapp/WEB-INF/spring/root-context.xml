@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- DB driver 및 connection -->
+	<bean id='realDataSource' class='org.apache.commons.dbcp.BasicDataSource'>
+		<property name='driverClassName' value='oracle.jdbc.driver.OracleDriver'/>
+		<property name='url' value='jdbc:oracle:thin:@rclass.iptime.org:1521:xe'/>
+		<property name='username' value=''/>
+		<property name='password' value=''/>
+	</bean>
+	
+	<!-- [SQL] console 출력 -->
+	<bean id='dataSource' class='net.sf.log4jdbc.Log4jdbcProxyDataSource'>
+		<constructor-arg ref='realDataSource'/>
+		<property name="logFormatter">
+			<bean class='net.sf.log4jdbc.tools.Log4JdbcCustomFormatter'>
+				<property name='loggingType' value='MULTI_LINE'/>
+				<property name='sqlPrefix' value='[SQL] '/>
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- sessionFactory -->
+	<bean id='sqlSessionFactory' class='org.mybatis.spring.SqlSessionFactoryBean'>
+		<property name="dataSource" ref='dataSource'/>
+		<property name="configLocation" value='classpath:mybatis-config.xml'/>
+		<property name="mapperLocations" value='classpath*:mappers/**/*.xml'/>
+	</bean>
+	
+	<!-- sessionTemplate -->
+	<bean id='sqlSession' class='org.mybatis.spring.SqlSessionTemplate'>
+		<constructor-arg index='0' ref='sqlSessionFactory'/>
+	</bean>
+	
+	<!-- 메일 설정 -->
+	<bean id='mailSender' class='org.springframework.mail.javamail.JavaMailSenderImpl'>
+		<property name='host' value='smtp.naver.com'/>
+		<property name='port' value='587'/>
+		<property name='username' value=''/>
+		<property name='password' value=''/>
+		<property name='defaultEncoding' value='utf-8'/>
+		<property name='javaMailProperties'>
+			<props>
+				<prop key='mail.transport.protocol'>smtp</prop>
+				<prop key='mail.smtp.auth'>true</prop>
+				<prop key='mail.smtpstarttls.enable'>true</prop>
+				<prop key='mail.debug'>true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- TransactionManager 등록 -->
+	<bean id='transactionManager' class='org.springframework.jdbc.datasource.DataSourceTransactionManager'>
+		<property name='dataSource' ref='dataSource'></property>
+	</bean>
+	
+	<!-- Annotation 방식으로 transaction처리하기 위해 등록 -->
+	<tx:annotation-driven transaction-manager='transactionManager'/>
+	
+</beans>

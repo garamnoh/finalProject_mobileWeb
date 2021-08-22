@@ -1,0 +1,297 @@
+/* 제품 정보 */
+#container>#detailInfo{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 145px;
+}
+
+/* 제품 이미지 */
+#container>#detailInfo>#imgBox{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#container>#detailInfo>#imgBox>img#detailImg{
+    width: 100%;
+}
+
+/* 제품 */
+#container>#detailInfo>#textInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 제품 이름 */
+#container>#detailInfo>#textInfo>#titleBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#container>#detailInfo>#textInfo>#titleBox>#titleInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#container>#detailInfo>#textInfo>#titleBox>#titleInfo>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#detailInfo>#textInfo>#titleBox>span#titleInfoEn{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+
+    color: #DDDCDC;
+}
+
+#container>#detailInfo>#textInfo>#option{
+	display: flex;
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+	border: 1px solid #dddcdc;
+	
+	margin-bottom: 10px;
+}
+
+#container>#detailInfo>#textInfo>#option>#hot{
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	padding: 5px 0;
+	font-size: 14px;
+	font-weight: 500;
+	color: #dddcdc;
+}
+
+#container>#detailInfo>#textInfo>#option>#iced{
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	padding: 5px 0;
+	font-size: 14px;
+	font-weight: 500;
+	color: #dddcdc;
+}
+
+/* 제품 설명 */
+#container>#detailInfo>#textInfo>#size{
+	display: flex;
+	width: 100%;
+	height: auto;
+}
+
+#container>#detailInfo>#textInfo>#size>div{
+	width: 100%;
+	height: auto;
+	border: 1px #dddcdc solid;
+	border-radius: 5px;
+	padding: 10px 0 5px 0;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#container>#detailInfo>#textInfo>#size>div>img{
+	margin-bottom: 5px;
+}
+
+#container>#detailInfo>#textInfo>#size>div#tall{
+	border: 2px solid #00704A;
+}
+
+#container>#detailInfo>#textInfo>#size>div#grande{
+	margin: 0 10px;
+}
+
+#container>#detailInfo>#textInfo>#size>div>span{
+	font-size: 14px;
+	font-weight: 500;
+	opacity: .2;
+}
+
+#container>#detailInfo>#textInfo>#size>div#tall>span{
+	opacity: 1;	
+}
+
+#container>#detailInfo>#textInfo>#size>div#tall>img{
+	height: 30px;
+	opacity: .7;
+}
+
+#container>#detailInfo>#textInfo>#size>div#grande>img{
+	height: 35px;
+	opacity: .2;
+}
+
+#container>#detailInfo>#textInfo>#size>div#venti>img{
+	height: 40px;
+	opacity: .2;
+}
+
+/* 제품 설명 */
+#container>#detailInfo>#textInfo #infoBox{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+/* 샷 추가 */
+#container>#detailInfo>#textInfo #shotBox{
+	width: calc(100% - 20px);
+	height: 35px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	border-radius: 5px;
+	border: 1px #dddcdc solid;
+	padding: 0 10px;
+	margin-top: 10px;
+}
+
+#container>#detailInfo>#textInfo #shotBox>span{
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#container>#detailInfo>#textInfo #shotBox>#shot{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container>#detailInfo>#textInfo #shotBox>#shot>img{
+	width: 20px;
+	height: 20px;
+}
+
+#container>#detailInfo>#textInfo #shotBox>#shot>img:first-child{
+	opacity: .5;
+}
+
+#container>#detailInfo>#textInfo #shotBox>#shot>span{
+	margin: 0 10px;
+	font-weight: bold;
+}
+
+
+/* 주문 버튼 */
+/* 수량 및 가격 */
+#container>#orderButtonContainer{
+    position: fixed;
+    left: 0;
+    bottom: 55px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#amountContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#amountContainer>img{
+    width: 20px;
+    height: 20px;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#amountContainer>img#minusImg{
+    margin-right: 10px;
+    opacity: .5;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#amountContainer>img#plusImg{
+    margin-left: 10px;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#amountContainer>#count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#amountContainer>#count>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container>#orderButtonContainer>#priceInfoContainer>#price>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+/* 버튼들 */
+#container>#orderButtonContainer>#orderButtonsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container>#orderButtonContainer>#orderButtonsContainer>img{
+    width: 30px;
+    height: 30px;
+}
+
+#container>#orderButtonContainer>#orderButtonsContainer>#buttons{
+    display: flex;
+    align-items: center;
+}
+
+#container>#orderButtonContainer>#orderButtonsContainer>#buttons>#basketButton{
+    height: 30px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    
+    background: #00704A;
+    border-radius: 15px;
+}
+
+#container>#orderButtonContainer>#orderButtonsContainer>#buttons>#basketButton>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    
+    color: #FFFFFF;
+}

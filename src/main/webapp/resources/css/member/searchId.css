@@ -1,0 +1,140 @@
+/* body */
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    width: 1000px;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+/* 취소 버튼 */
+#container>#cancel{
+    margin-top: 20px;
+}
+
+#container>#cancel>img{
+    width: 20px;
+    height: 20px;
+}
+
+/* 로고 */
+#container>#logoContainer{
+    margin-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#container>#logoContainer>img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+#container>#logoContainer>div#logoText{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#logoContainer>div#logoText>span{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+}
+
+#container>#logoContainer>div#logoText>span:last-child{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+/* 아이디 찾기 컨테이너 */
+#container>#searchIdContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+#container>#searchIdContainer>input{
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #dddcdc;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    
+    border-radius: 0;
+}
+
+#container>#searchIdContainer>input:focus{
+    outline: none;
+}
+
+/* 검색 결과 컨테이너 */
+#container>#searchResultContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+
+    border: 1px solid #dddcdc;
+    border-radius: 3px;
+
+    padding: 10px 0;
+}
+
+#container>#searchResultContainer>span{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+/* 버튼 컨테이너 */
+#container>#buttonContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    height: 70px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.25);
+    background-color: #FFFFFF;
+}
+
+#container>#buttonContainer>div#searchIdButton{
+    height: 40px;
+    background-color: #00704A;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#container>#buttonContainer>div#searchIdButton>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}
+
+#container>#buttonContainer>div:hover{
+    opacity: .8;
+}
+
+#container>#buttonContainer>div:active{
+    opacity: 1;
+}

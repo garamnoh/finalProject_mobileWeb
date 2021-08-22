@@ -1,0 +1,204 @@
+/* search Location */
+#container>#searchLocationHeader{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: calc(100% - 30px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    backdrop-filter: blur(4px);
+    
+    z-index: 100;
+}
+
+#container>#searchLocationHeader>#searchStore{
+    height: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#container>#searchLocationHeader>#searchStore>span#searchStoreText{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+}
+
+#container>#searchLocationHeader>#searchStore>img{
+    width: 20px;
+    height: 20px;
+}
+
+#container>#searchLocationHeader>#searchStore>img#searchStoreMenuImg{
+	display: none;
+}
+
+#container>#searchLocationHeader>#searchInputContainer{
+	width: 100%;
+    height: 25px;
+    margin-bottom: 10px;
+    
+    display: flex;
+}
+
+#container>#searchLocationHeader>#searchInputContainer>#searchStoreInput{
+    height: 25px;
+    background: #DDDCDC;
+    border: none;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 0;
+    
+    flex-grow: 1;
+}
+
+#container>#searchLocationHeader>#searchInputContainer>#searchStoreInputButton{
+	height: 25px;
+	width: 100%%;
+	margin-right: 0;
+	margin-left: 5px;
+	border: none;
+	border-radius: 3px;
+	background: #00704A;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#container>#searchLocationHeader>#searchInputContainer>#searchStoreInput:focus,
+#container>#searchLocationHeader>#searchInputContainer>#searchStoreInputButton:focus{
+    outline: none;
+}
+
+#container>#searchLocationHeader>#selectButtons{
+    display: flex;
+    justify-content: space-between;
+}
+
+#container>#searchLocationHeader>#selectButtons>.button{
+    width: calc(100% / 3);
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DDDCDC;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+
+#container>#searchLocationHeader>#selectButtons>div.selected{
+    background: #00704A;
+    border: 1px solid #00704A;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    color: #ffffff;
+}
+
+#container>#searchLocationHeader>#selectButtons>.button:nth-child(2){
+    margin: 0 10px;
+}
+
+/* storeInfo Container */
+#container>#searchResultContainer{
+    margin-top: 165px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 85px;
+    overflow: auto;
+}
+
+#container>#searchResultContainer>.resultBox{
+    padding: 5px;
+    border: 1px solid #DDDCDC;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    margin-bottom: 10px;
+}
+
+#container>#searchResultContainer>.resultBox>.resultText{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+
+    margin-bottom: 5px;
+}
+
+#container>#searchResultContainer>.resultBox>.resultAddress{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px; 
+    color: #DDDCDC;
+    word-break: keep-all;
+}
+
+/* location button */
+#container>#locationButtonContainer{
+    position: fixed;
+    bottom: 55px;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 30px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+}
+
+#container>#locationButtonContainer>#searchLocation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
+}
+
+#container>#locationButtonContainer>#searchLocation>span#locationText{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}
+
+#container>#locationButtonContainer>#searchLocation>img{
+    width: 20px;
+    height: 20px;
+}
+
+#container>#locationButtonContainer>#basket{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40px;
+}
+
+#container>#locationButtonContainer>#basket>img#basketImg{
+    width: 20px;
+    height: 20px;
+}
+
+#container>#locationButtonContainer>#basket>span#basketCount{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}

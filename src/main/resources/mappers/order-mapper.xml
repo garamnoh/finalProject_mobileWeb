@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0/EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace='order'>
+	<resultMap type="product" id="productMap">
+		<id property='productId' column='PRODUCT_ID'/>
+		<result property='optionId' column='OPTION_ID'/>
+		<result property='productName' column='PRODUCT_NAME'/>
+		<result property='productNameEn' column='PRODUCT_NAME_EN'/>
+		<result property='productPrice' column='PRODUCT_PRICE'/>
+		<result property='category' column='CATEGORY'/>
+		<result property='type' column='TYPE'/>
+		<result property='productImg' column='PRODUCT_IMG'/>
+	</resultMap>
+	<resultMap type='cart' id='cartMap'>
+		<id property='cartSeq' column='CART_SEQ'/>
+		<result property='id' column='ID'/>
+		<result property='productName' column='PRODUCT_NAME'/>
+		<result property='productImg' column='PRODUCT_IMG'/>
+		<result property='category' column='CATEGORY'/>
+		<result property='productOption' column='PRODUCT_OPTION'/>
+		<result property='productSize' column='PRODUCT_SIZE'/>
+		<result property='productQuantity' column='PRODUCT_QUANTITY'/>
+		<result property='productPrice' column='PRODUCT_PRICE'/>
+		<result property='extraShot' column='EXTRA_SHOT'/>
+	</resultMap>
+	<resultMap type='order' id='orderMap'>
+		<id property='orderSeq' column='ORDER_SEQ'/>
+		<result property='orderNo' column='ORDER_NO'/>
+		<result property='id' column='ID'/>
+		<result property='storeId' column='STORE_ID'/>
+		<result property='productName' column='PRODUCT_ID'/>
+		<result property='productPrice' column='PRODUCT_PRICE'/>
+		<result property='selectedOption' column='SELECTED_OPTION'/>
+		<result property='addedPrice' column='ADDED_PRICE'/>
+		<result property='quantity' column='QUANTITY'/>
+		<result property='extraShot' column='EXTRA_SHOT'/>
+		<result property='paymentDate' column='PAYMENT_DATE'/>
+		<result property='paymentType' column='PAYMENT_TYPE'/>
+		<result property='cashReceipt' column='CASH_RECEIPT'/>
+		<result property='approvalNo' column='APPROVAL_NO'/>
+	</resultMap>
+	<select id='getProductInfo' resultMap='productMap'>
+		SELECT * FROM PRODUCT_INFO WHERE PRODUCT_ID=#{productId}
+	</select>
+	<select id='getMenuList' resultMap='productMap'>
+		<choose>
+			<when test='menu != null'>
+				SELECT * FROM PRODUCT_INFO WHERE CATEGORY=#{menuButton} AND TYPE LIKE '%'||#{menu}||'%'
+			</when>
+			<otherwise>
+				SELECT * FROM PRODUCT_INFO WHERE CATEGORY=#{menuButton}
+			</otherwise>
+		</choose>
+	</select>
+	<insert id='addToShoppingCart' parameterType='cart'>
+		INSERT INTO SHOPPING_CART VALUES (SEQ_CART.NEXTVAL, #{id}, #{productName}, #{productImg}, #{category}, #{productOption}, #{productSize}, #{productQuantity}, #{productPrice}, #{extraShot})
+	</insert>
+	<select id='checkShoppingCart' resultType='_int'>
+		SELECT COUNT(*) FROM SHOPPING_CART WHERE ID=#{id}
+	</select>
+	<select id='getShoppingCartList' resultMap='cartMap'>
+		SELECT * FROM SHOPPING_CART WHERE ID=#{id}
+	</select>
+	<delete id='deleteCartList' parameterType='_int'>
+		DELETE FROM SHOPPING_CART WHERE CART_SEQ=#{cartSeq}
+	</delete>
+	<update id='changeQuantity' parameterType='cart'>
+		UPDATE SHOPPING_CART SET PRODUCT_QUANTITY=#{productQuantity} WHERE CART_SEQ=#{cartSeq}
+	</update>
+	<insert id='addOrderInfo' parameterType='hashmap'>
+		INSERT INTO ORDER_INFO VALUES (SEQ_ORDER.NEXTVAL, #{orderNo}, #{id}, #{storeId}, #{productName}, #{productPrice}, #{selectedOption}, #{addedPrice}, #{quantity}, #{extraShot}, SYSDATE, #{paymentType}, #{cashReceipt}, DEFAULT)
+	</insert>
+	<delete id='removeCartList' parameterType='string'>
+		DELETE FROM SHOPPING_CART WHERE ID=#{id}
+	</delete>
+	<select id='getOrderList' parameterType='hashmap' resultType='hashmap'>
+		SELECT ORDER_NO, ID, STORE_ID, STORE_NAME, PAYMENT_DATE, PAYMENT_TYPE, SUM( (PRODUCT_PRICE + ADDED_PRICE) * QUANTITY + (500 * EXTRA_SHOT) ) AS TOTAL_PRICE 
+		FROM ORDER_INFO 
+		LEFT JOIN STORE_INFO USING (STORE_ID) 
+		WHERE ID=#{id} AND PAYMENT_DATE BETWEEN #{startDate} AND #{endDate} 
+		GROUP BY ORDER_NO, ID, STORE_ID, STORE_NAME, PAYMENT_DATE, PAYMENT_TYPE 
+		ORDER BY PAYMENT_DATE DESC
+	</select>
+	<select id='getBillInfo' parameterType='hashMap' resultType='hashmap'>
+		SELECT * FROM ORDER_INFO LEFT JOIN STORE_INFO USING (STORE_ID) WHERE ORDER_NO=#{orderNo}
+	</select>
+</mapper>

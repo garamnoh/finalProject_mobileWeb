@@ -1,0 +1,27 @@
+/* 회사 로고 이미지 */
+#logo span{background: url(http://www.0000.com/img/logo.png) 0 0 no-repeat; background-size: contain;}
+
+/* 바탕 배경색상*/
+body{background-color: #373737;}
+#wrap {background-color: #fff;}
+
+/* 검색도움말 색상 */
+#search p{color:#3e566d;}
+
+/* 검색창 배경 색상 */
+#header{background-color: #e9e9e9;} 
+
+/* 도로명 아이콘 수정 */
+.icon_road >span{border: 1px solid #186bb9; background-color: #186bb9; color:#fff;}
+
+/* 지번 아이콘 수정 */
+.icon_juso >span{border:1px solid #282828; background-color: #fff; color:#282828;}
+
+/* 하단버튼 */
+#address_detail input[type="button"] {border: 1px solid #186bb9; background-color: #186bb9; color:#fff;}
+
+/* 페이지 선택된 페이지 버튼*/
+.page_num a{background-color: #fff; color:#101010;}
+
+/* 페이지 선택되지 않은 페이지 버튼*/
+.page_num strong{background-color: #186bb9; color:#fff;}

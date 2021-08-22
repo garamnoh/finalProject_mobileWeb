@@ -1,0 +1,215 @@
+/* 계정 정보 */
+#container>#otherContainer{
+    margin: 55px 0 6px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#otherContainer>span#otherTitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 20px;
+}
+
+#container>#otherContainer>#otherButtons{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#otherContainer>#otherButtons>.button{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    justify-content: space-between;
+}
+
+#container>#otherContainer>#otherButtons>.button:last-child{
+    margin-bottom: 0;
+}
+
+#container>#otherContainer>#otherButtons>.button>.buttonName{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+
+    padding: 5px 10px;
+
+    border: 1px solid #DDDCDC;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#container>#otherContainer>#otherButtons>.button>.userName,
+#container>#otherContainer>#otherButtons>.button>.userPhone,
+#container>#otherContainer>#otherButtons>.button>.userAddress{
+    opacity: .6;
+}
+
+#container>#otherContainer>#otherButtons>.button>img.editImg{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+#container>#otherContainer>#otherButtons>.button>#doneNickname{
+	display: none;
+}
+
+#container>#otherContainer>#otherButtons>.button>#editBox{
+	position: relative;
+	flex-grow: 1;
+	
+	display: none;
+}
+
+
+#container>#otherContainer>#otherButtons>.button>#editBox>input{
+    -webkit-border-radius:0; 
+	-webkit-appearance:none;
+	
+	width: 100%;
+		
+    border: 1px solid #DDDCDC;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 5px 10px;
+       
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+}
+
+#container>#otherContainer>#otherButtons>.button>#editBox>input:focus{
+	outline: none;
+}
+
+#container>#otherContainer>#otherButtons>.button>#editBox>#ok,
+#container>#otherContainer>#otherButtons>.button>#editBox>#no{
+	font-size: 10px;
+	width: 20px;
+	
+	position: absolute;
+	right: 5px;
+	top: 6px;
+	display: none;
+}
+
+#container>#otherContainer>#otherButtons>.button>#editBox>#ok{
+	color: #00704A;
+}
+
+#container>#otherContainer>#otherButtons>.button>#editBox>#no{
+	color: #BB4C41;
+}
+
+/* History */
+#container>#history{
+	width: 100%;
+	height: auto;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+    padding: 5px 10px;
+
+    border: 1px solid #DDDCDC;
+    box-sizing: border-box;
+    border-radius: 3px;
+	
+	margin: 5px 0 10px 0;
+}
+
+#container>#history>img{
+	width: 20px;
+	height: 20p;
+}
+
+#container>#history>#historyTitle{
+	display: flex;
+	align-items: center;
+}
+
+#container>#history>#historyTitle>img{
+	width: 25px;
+	height: 25px;
+	
+	margin-top: -3px;
+	margin-right: 5px;
+}
+
+#container>#history>#historyTitle>span{
+	font-size: 15px;
+	font-weight: 600;
+}
+
+
+/* 회원 탈퇴 */
+#container>#deleteAccount{
+	width: 100%;
+	
+    display: flex;
+    justify-content: flex-end;
+}
+
+#container>#deleteAccount>#deleteAccountButton{
+	width: 100%;
+	
+    padding: 7px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #DDDCDC;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+#container>#deleteAccount>#deleteAccountButton>span{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+
+    color: #BCBCBC;
+}
+
+/* 로그아웃 버튼 */
+#container>#logoutButtonContainer{
+    position: fixed;
+    bottom: 55px;
+    left: 0;
+
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#container>#logoutButtonContainer>#logoutButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+    background: #00704A;
+    border-radius: 20px;
+}
+
+#container>#logoutButtonContainer>#logoutButton>span{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+
+    color: #FFFFFF;
+}

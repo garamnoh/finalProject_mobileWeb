@@ -1,0 +1,102 @@
+body{
+    background-color: #dddcdc;
+}
+
+#container>#backgroundWhite{
+    background-color: #ffffff;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0 15px;
+}
+
+/* 카드 정보 */
+#container>#backgroundWhite>#cardContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 55px 0 20px 0;
+}
+
+#container>#backgroundWhite>#cardContainer>#cardName{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 10px;
+}
+
+#container>#backgroundWhite>#cardContainer>#cardInfo{
+    display: flex;
+    align-items: center;
+}
+
+#container>#backgroundWhite>#cardContainer>#cardInfo>img#cardImg{
+    width: 96px;
+    height: 60px;
+    margin-right: 10px;
+}
+#container>#backgroundWhite>#cardContainer>#cardInfo>#cardInfoText{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#backgroundWhite>#cardContainer>#cardInfo>#cardInfoText>span#cardBalanceText{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #DDDCDC;
+}
+
+#container>#backgroundWhite>#cardContainer>#cardInfo>#cardInfoText>span#cardNumber{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #DDDCDC;
+}
+
+#container>#backgroundWhite>#cardContainer>#cardInfo>#cardInfoText>span#cardBalance{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+    color: #000000;
+}
+
+/* 이용 내역 */
+#container>#historyContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: -15px;
+    padding: 15px;
+}
+
+#container>#historyContainer>span#historyText{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+}
+
+#container>#historyContainer>#line{
+    height: 1px;
+    width: 100%;
+    background-color: #cccccc;
+    margin: 10px 0;
+}
+
+#container>#historyContainer>#historyBox{
+    display: flex;
+    flex-direction: column;
+    border: #cccccc 1px solid;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+#container>#historyContainer>#historyBox>span{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+}

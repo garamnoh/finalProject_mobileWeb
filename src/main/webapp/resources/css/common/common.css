@@ -1,0 +1,369 @@
+/* body */
+body{
+	width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* modal(영수증) */
+#canvasButton{
+	display: none;
+}
+
+#modalBackground{
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+	
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 120;
+	
+	display: none;
+}
+
+#modalBackground>#modal{
+	position: absolute;
+	
+	top: 23px;
+	left: 50%;
+	transform: translate(-50%);
+	
+	width: calc(100% - 80px);
+ 	height: calc(100% - 90px);
+	
+	padding: 20px 15px;
+
+	background-color: #ffffff;
+	border-radius: 5px;
+	border: 1px #cccccc solid;
+	
+	overflow: auto;
+}
+
+.html2canvas{
+    overflow: visible !important;
+	height: auto !important;
+	max-height: auto !important;
+}
+
+
+#modalBackground>#modal>#modalHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	height: auto;
+	margin: 0;
+}
+
+#modalBackground>#modal>#modalHeader>#modalTitle{
+	font-size: 15px;
+	font-weight: 600;
+	flex-grow: 1;
+	text-align: left;
+}
+
+#modalBackground>#modal>#modalHeader>div{
+	flex-grow: 1;
+	text-align: right;
+}
+
+#modalBackground>#modal>#modalHeader>div>img{
+	width: 20px;
+	height: 20px;	
+	margin-left: 10px;
+}
+
+#modalBackground>#modal>#modalContentContainer{
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalStoreInfo{
+	display: flex;
+	flex-direction: column;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalStoreInfo>div{
+	display: flex;
+	justify-content: space-between;
+	
+	margin-bottom: 5px;
+	
+	font-size: 12px;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalStoreInfo>div>span{
+	flex-grow: 1;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalStoreInfo>div#modalStoreId>span:last-child,
+#modalBackground>#modal>#modalContentContainer>#modalStoreInfo>div#modalStoreName>span:last-child,
+#modalBackground>#modal>#modalContentContainer>#modalStoreInfo>div#modalStoreTel>span:last-child{
+	text-align: right;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalOrderNumber{
+	display: flex;
+	justify-content: center;
+	
+	font-size: 15px;
+	font-weight: 600;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo{
+	display: flex;
+	flex-direction: column;
+
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>span{
+	font-weight: 600;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#selectedOptionBox{
+	display: flex;
+	justify-content: space-between;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#selectedOptionBox>span,
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#selectedOptionBox>div{
+	flex-grow: 1;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#selectedOptionBox>div{
+	text-align: right;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#selectedOptionBox>#selectedOptionValue>span{
+	margin-left: 5px;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#extraShotBox{
+	display: flex;
+	justify-content: space-between;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#extraShotBox>span,
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#extraShotBox>div{
+	flex-grow: 1;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#extraShotBox>div{
+	text-align: right;
+}
+
+#modalBackground>#modal>#modalContentContainer>#modalProductInfo>#extraShotBox>#extraShotValue>span{
+	margin-left: 5px;
+}
+
+#modalBackground>#modal>#modalContentContainer>#finalPriceBox,
+#modalBackground>#modal>#modalContentContainer>#couponBox{
+	display: flex;
+	justify-content: space-between;
+	
+	font-size: 12px;
+	margin: 5px 0;
+}
+
+#modalBackground>#modal>#modalContentContainer>#finalPriceBox>span,
+#modalBackground>#modal>#modalContentContainer>#couponBox>span{
+	flex-grow: 1;
+}
+
+#modalBackground>#modal>#modalContentContainer>#finalPriceBox>span:first-child,
+#modalBackground>#modal>#modalContentContainer>#couponBox>span:first-child{
+	font-weight: 600;
+}
+
+#modalBackground>#modal>#modalContentContainer>#finalPriceBox>span:last-child,
+#modalBackground>#modal>#modalContentContainer>#couponBox>span:last-child{
+	text-align: right;
+}
+
+#modalBackground>#modal>#modalContentContainer>#paymentPriceBox{
+	display: flex;
+	justify-content: space-between;
+	
+	font-size: 14px;
+	font-weight: 600;
+	margin: 5px 0;
+}
+
+#modalBackground>#modal>#modalContentContainer>#paymentPriceBox>span{
+	flex-grow: 1;
+}
+
+#modalBackground>#modal>#modalContentContainer>#paymentPriceBox>span:last-child{
+	text-align: right;
+}
+
+#modalBackground>#modal>#modalContentContainer>#cardInfoBox{
+	display: flex;
+	flex-direction: column;
+}
+
+#modalBackground>#modal>#modalContentContainer>#cardInfoBox>div{
+	display: flex;
+	justify-content: space-between;
+
+	font-size: 12px;	
+	margin: 5px 0;
+}
+
+#modalBackground>#modal>#modalContentContainer>#cardInfoBox>div>span{
+	flex-grow: 1;	
+}
+
+#modalBackground>#modal>#modalContentContainer>#cardInfoBox>div>span:last-child{
+	text-align: right;
+}
+
+#modalBackground>#modal>#modalContentContainer>#cardInfoBox>div>span:first-child{
+	font-weight: 600;
+}
+
+#modalBackground>#modal>#modalContentContainer>#additionalInfo{
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+}
+
+#modalBackground>#modal>#modalContentContainer>#additionalInfo>span{
+	width: 100%;
+	text-align: center;
+	font-size: 12px;	
+	margin: 5px 0;
+}
+
+#modalBackground>#modal>#modalContentContainer>#additionalInfo>span:first-child{
+	font-weight: 600;
+}
+
+/* 전체 */
+#container{
+    width: 1000px;
+    height: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    margin-bottom: 75px;
+}
+
+/* userInfo */
+#userInfoContainer{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 3px rgba(221, 220, 220, 0.25);
+    backdrop-filter: blur(4px);
+    background-color: #ffffff;
+    z-index: 110;
+}
+
+#userInfoContainer>div#userText{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    padding-left: 15px;
+}
+
+#userInfoContainer>#icons{
+	positon: relative;
+}
+
+#userInfoContainer>#icons>img#shopping{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+#userInfoContainer>#icons>img#notification{
+    width: 26px;
+    height: 26px;
+    padding-right: 15px;
+}
+
+#userInfoContainer>#icons>img#shoppingAlert,
+#userInfoContainer>#icons>img#notificationALert{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	display: none;
+}
+
+#userInfoContainer>#icons>img#shoppingAlert{
+	top: 5px;
+	right: 47px;
+}
+
+#userInfoContainer>#icons>img#notificationALert{
+	top: 5px;
+	right: 12px;
+}
+
+/* footer navBar */
+#navBarContainer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 55px;
+    background-color: #00704a;
+}
+
+#navBarContainer>.iconBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.3;
+}
+
+#navBarContainer>.iconBox>img{
+    width: 30px;
+    height: 30px;
+}
+
+#navBarContainer>.iconBox>span{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: -0.24px;
+    color: #ffffff;
+}
+
+/* footer 버튼 활성 클래스 */
+#navBarContainer>div.focused{
+	opacity: 1;
+}
+
+/* Line */
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #dddcdc;
+    margin: 20px 0;
+}
+
+.dotLine{
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    border: 1px dashed #dddcdc;
+}

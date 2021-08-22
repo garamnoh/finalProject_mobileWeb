@@ -1,0 +1,22 @@
+#map{
+	width: 100%;
+	height: calc(100% - 15px);
+	position: relative;
+}
+
+#map>#searchCurrentLocation{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: 10;
+	
+	background-color: #ffffff;
+	opacity: .7;
+	border-radius: 50%;
+	padding: 10px;
+}
+
+#map>#searchCurrentLocation>img{
+	width: 25px;
+	height: 25px;
+}

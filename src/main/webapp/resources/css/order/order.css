@@ -1,0 +1,141 @@
+/* order header */
+#container>#orderHeader{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: calc(100% - 30px);
+    padding: 15px 15px 0 15px;
+    border-bottom: 1px solid #dddcdc;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+}
+
+#container>#orderHeader>#orderText{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 10px;
+}
+
+#container>#orderHeader>#menuContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#container>#orderHeader>#menuContainer>.menuBox{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container>#orderHeader>#menuContainer>.menuBox:first-child{
+    border-bottom: 1px solid #00704a;
+}
+
+/* menu list */
+#container>.menuListContainer{
+    margin-top: 120px;
+    margin-bottom: 85px;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+#container>.menuListContainer>.menuList{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#container>.menuListContainer>.menuList>img.menuImg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#container>.menuListContainer>.menuList>div.menuText{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>.menuListContainer>.menuList>div.menuText>span.menuKo{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    margin-bottom: 3px;
+}
+
+#container>.menuListContainer>.menuList>div.menuText>span.menuEn{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+}
+    
+/* location button */
+#container>#locationButtonContainer{
+    position: fixed;
+    bottom: 55px;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 30px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+}
+
+#container>#locationButtonContainer>#searchLocation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-right: 20px;
+}
+
+#container>#locationButtonContainer>#searchLocation>span#locationText{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}
+
+#container>#locationButtonContainer>#searchLocation>img{
+    width: 20px;
+    height: 20px;
+}
+
+#container>#locationButtonContainer>#basket{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40px;
+}
+
+#container>#locationButtonContainer>#basket>img#basketImg{
+    width: 20px;
+    height: 20px;
+}
+
+#container>#locationButtonContainer>#basket>span#basketCount{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.24px;
+    color: #FFFFFF;
+}
+
+/* Option */
+#menuOption_food,
+#menuOption_md{
+	display: none;
+}

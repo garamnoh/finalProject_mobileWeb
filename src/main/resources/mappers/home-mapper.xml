@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0/EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace='home'>
+	<resultMap type="product" id="productMap">
+		<id property='productId' column='PRODUCT_ID'/>
+		<result property='optionId' column='OPTION_ID'/>
+		<result property='productName' column='PRODUCT_NAME'/>
+		<result property='productNameEn' column='PRODUCT_NAME_EN'/>
+		<result property='productPrice' column='PRODUCT_PRICE'/>
+		<result property='category' column='CATEGORY'/>
+		<result property='type' column='TYPE'/>
+		<result property='productImg' column='PRODUCT_IMG'/>
+	</resultMap>
+	<select id='newProductList' resultMap='productMap'>
+		SELECT * FROM PRODUCT_INFO WHERE TYPE LIKE '%new%'
+	</select>
+</mapper>

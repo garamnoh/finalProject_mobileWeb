@@ -1,0 +1,83 @@
+/* cart header */
+#container>#selectCardHeader{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 25px;
+    padding: 15px 15px 10px 15px;
+    
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+#container>#selectCardHeader>#selectCardText{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 10px;
+}
+
+#container>#myCardInfoContainer{
+	width: 100%;
+
+	margin-top: 90px;
+	margin-bottom: 55px;
+	
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo{
+	width: 100%;
+	
+	display: flex;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#cardImg{
+	width: calc(50% - 5px);
+	margin-right: 10px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText{
+	width: calc(50% - 5px);
+	
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: space-between;
+	
+	font-size: 14px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#myCardInfoTextBox{
+	display: flex;
+	flex-direction: column;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#myCardInfoTextBox>span{
+	margin-bottom: 7px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#myCardInfoTextBox>span#cardName{
+	font-weight: 600;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#chargingHistorySearchingBox{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#chargingHistorySearchingBox>span{
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 3px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#chargingHistorySearchingBox>img{
+	width: 20px;
+	height: 20px;
+}

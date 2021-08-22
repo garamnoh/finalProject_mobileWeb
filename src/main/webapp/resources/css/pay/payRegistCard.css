@@ -1,0 +1,82 @@
+/* cart header */
+#container>#registCardHeader{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 25px;
+    padding: 15px 15px 10px 15px;
+    
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+#container>#registCardHeader>#registCardText{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 10px;
+}
+
+#container>#registCardInfoContainer{
+	width: 100%;
+
+	margin-top: 90px;
+	margin-bottom: 55px;
+	
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+}
+
+#container>#registCardInfoContainer>#registCardInfo{
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+}
+
+#container>#registCardInfoContainer>#registCardInfo>span#cardName{
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+#container>#registCardInfoContainer>#registCardInfo>#registCardImage{
+	width: 100%;
+	position: relative;
+}
+
+#container>#registCardInfoContainer>#registCardInfo>#registCardImage>#cardImg{
+	width: 100%;
+}
+
+#container>#registCardInfoContainer>#registCardInfo>#registCardImage>#registCard{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	
+	width: 50px;
+	height: 50px;
+	
+	border-radius: 50%;
+	background-color: #ffffff;
+	
+	opacity: .8;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#container>#registCardInfoContainer>#registCardInfo>#registCardImage>#registCard>img{
+	width: 35px;
+	height: 35px;	
+	opacity: .7;
+}
+
+#container>#registCardInfoContainer>#registCardInfo>#registCardImage>#registCard>span{
+	font-size: 13px;
+	font-weight; 600;
+}

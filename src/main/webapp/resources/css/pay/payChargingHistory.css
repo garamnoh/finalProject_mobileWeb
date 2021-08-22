@@ -1,0 +1,108 @@
+/* cart header */
+#container>#selectCardHeader{
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: calc(100% - 30px);
+    height: 25px;
+    padding: 15px 15px 10px 15px;
+    
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+#container>#selectCardHeader>#selectCardText{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 10px;
+}
+
+#container>#myCardInfoContainer{
+	width: 100%;
+
+	margin-top: 90px;
+	
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 5px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo{
+	width: 100%;
+	
+	display: flex;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#cardImg{
+	width: calc(50% - 5px);
+	margin-right: 10px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText{
+	width: calc(50% - 5px);
+	
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: space-between;
+	
+	font-size: 14px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#myCardInfoTextBox{
+	display: flex;
+	flex-direction: column;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#myCardInfoTextBox>span{
+	margin-bottom: 7px;
+}
+
+#container>#myCardInfoContainer>#myCardInfo>#myCardInfoText>#myCardInfoTextBox>span#cardName{
+	font-weight: 600;
+}
+
+/* 라인 */
+#container>#tempBox>.chargingLine{
+    width: 100%;
+    height: 1px;
+    background-color: #dddcdc;
+    margin: 10px 0;
+}
+
+/* 이용 내역 */
+#container>#historyContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: -15px;
+	margin-bottom: 65px;
+    padding: 0 15px;
+}
+
+#container>#historyContainer>#historyBox{
+    display: flex;
+	justify-content: space-between;
+    border: #cccccc 1px solid;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+#container>#historyContainer>#historyBox>div{
+    display: flex;
+    flex-direction: column;
+}
+
+#container>#historyContainer>#historyBox>div>span{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+}
+
+#container>#historyContainer>#historyBox>img{
+	width: 20px;
+	height: 20px;
+}

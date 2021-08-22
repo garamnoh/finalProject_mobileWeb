@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD mapper 3.0/EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace='pay'>
+	<resultMap type='card' id="cardMap">
+		<id property='cardSeq' column='CARD_SEQ'/>
+		<result property='id' column='ID'/>
+		<result property='cardId' column='CARD_ID'/>
+		<result property='cardNo' column='CARD_NO'/>
+		<result property='balance' column='BALANCE'/>
+		<result property='cardName' column='CARD_NAME'/>
+		<result property='cardImg' column='CARD_IMG'/>
+	</resultMap>
+	<resultMap type='charging' id='chargingMap'>
+		<id property='chargingSeq' column='CHARGING_SEQ'/>
+		<result property='cardSeq' column='CARD_SEQ'/>
+		<result property='id' column='ID'/>
+		<result property='impUid' column='IMP_UID'/>
+		<result property='merchantUid' column='MERCHANT_UID'/>
+		<result property='price' column='PRICE'/>
+		<result property='chargingDate' column='CHARGING_DATE'/>
+		<result property='payment' column='PAYMENT'/>
+	</resultMap>
+	<select id='getCardList' resultMap='cardMap'>
+		SELECT * FROM CARD_INFO
+	</select>
+	<select id='getMyCardList' parameterType='string' resultMap='cardMap'>
+		SELECT * FROM CARD LEFT JOIN CARD_INFO USING (CARD_ID) WHERE ID=#{id}
+	</select>
+	<insert id='registCard' parameterType='hashmap'>
+		INSERT INTO CARD VALUES (SEQ_CARD.NEXTVAL, #{id}, #{cardId}, #{cardNo}, DEFAULT)
+	</insert>
+	<select id='getCardSeq' parameterType='hashmap' resultType='_int'>
+		SELECT CARD_SEQ FROM CARD WHERE ID=#{id} AND CARD_ID=#{cardId}
+	</select>
+	<update id='setMyCard' parameterType='hashmap'>
+		UPDATE MEMBER SET CARD_SEQ=#{cardSeq} WHERE ID=#{id}
+	</update>
+	<select id='getMyCardInfo' parameterType='_int' resultMap='cardMap'>
+		SELECT * FROM CARD LEFT JOIN CARD_INFO USING (CARD_ID) WHERE CARD_SEQ=#{cardSeq}
+	</select>
+	<update id='starbucksPaymentExcution'>
+		UPDATE CARD SET BALANCE=#{finalBalance} WHERE CARD_SEQ=#{cardSeq}
+	</update>
+	<insert id='chargingMyCard' parameterType='hashmap'>
+		INSERT INTO CHARGING_HISTORY VALUES (SEQ_CHARGING.NEXTVAL, #{cardSeq}, #{id}, #{impUid}, #{merchantUid}, #{price}, DEFAULT, '')
+	</insert>
+	<update id='updateMyCardInfo' parameterType='hashmap'>
+		UPDATE CARD SET BALANCE = BALANCE + #{price} WHERE ID=#{id} AND CARD_SEQ=#{cardSeq}
+	</update>
+	<select id='getChargingHistory' parameterType='int' resultMap='chargingMap'>
+		SELECT * FROM CHARGING_HISTORY WHERE CARD_SEQ=#{cardSeq} ORDER BY CHARGING_DATE DESC
+	</select>
+	<insert id='addPaymentHistoryIntoChargingHistory' parameterType='hashmap'>
+		INSERT INTO CHARGING_HISTORY VALUES (SEQ_CHARGING.NEXTVAL, #{cardSeq}, #{id}, '-', '-', #{totalPrice}, DEFAULT, 'Y')
+	</insert>
+</mapper>

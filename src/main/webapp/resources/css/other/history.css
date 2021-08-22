@@ -1,0 +1,94 @@
+/* 내역 정보 */
+#container>#historyContainer{
+	position: fixed;
+	width: calc(100% - 30px);
+	
+    margin-top: 40px;
+    padding: 15px 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+    z-index: 10;
+    background-color: #ffffff;
+}
+
+#container>#historyContainer>#historyTitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.24px;
+    margin-bottom: 20px;
+}
+
+#container>#historyContainer>#historySearchContainer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+}
+
+#container>#historyContainer>#historySearchContainer>input{
+ 	-webkit-border-radius:0;
+	-webkit-appearance:none;
+
+	width: 100px;
+	height: 28px;
+	flex-grow: 1;
+
+	display: flex;	
+	justify-content: center;
+	align-items: center;
+	
+	text-align: right;
+	
+	border: none;
+	
+	font-weight: 600;
+	background-color: #ffffff;
+}
+
+#container>#historyContainer>#historySearchContainer>input:focus{
+	outline: none;
+}
+
+#container>#historyContainer>#historySearchContainer>span{
+	font-weight: 600;
+}
+
+/* 이용 내역 */
+#container>#historyResultContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 141px 0 60px -15px;
+    padding: 0 15px;
+}
+
+#container>#historyResultContainer>#historyBox{
+    display: flex;
+    flex-direction: column;
+    border: #cccccc 1px solid;
+    padding: 5px;
+    margin: 5px 0;
+    
+    position: relative;
+}
+
+#container>#historyResultContainer>#historyBox>span{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.24px;
+}
+
+#container>#historyResultContainer>#historyBox>#paymentTypeImage{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+	width: 110px;
+	opacity: 1;
+}
