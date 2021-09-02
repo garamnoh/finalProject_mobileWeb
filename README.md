@@ -1,6 +1,12 @@
 # finalProject_mobileWeb
-### 프로젝트 https://lavish-glade-2ba.notion.site/Final-Project-f8a2033b622f475db9beda642df41c4a
+### 프로젝트 설명
+### https://lavish-glade-2ba.notion.site/Final-Project-f8a2033b622f475db9beda642df41c4a
 
+### front : webapp
+### back : java/com/noh/spring
+### sql : resources/mappers
+
+### 프로젝트 기능
 1. 메인 화면
   - 회원가입 (주소 API, 로컬 API)
   - 아이디 찾기 및 비밀번호 재설정 (메일 API)
