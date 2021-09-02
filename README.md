@@ -1,5 +1,5 @@
 # finalProject_mobileWeb
-### 프로젝트 설명
+### 프로젝트 설명 / 카페 모바일웹
 ### : https://lavish-glade-2ba.notion.site/Final-Project-f8a2033b622f475db9beda642df41c4a
 
 ### º front : webapp
