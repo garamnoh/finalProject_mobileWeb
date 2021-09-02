@@ -1,10 +1,10 @@
 # finalProject_mobileWeb
 ### - 프로젝트 설명
-###   - https://lavish-glade-2ba.notion.site/Final-Project-f8a2033b622f475db9beda642df41c4a
+### https://lavish-glade-2ba.notion.site/Final-Project-f8a2033b622f475db9beda642df41c4a
 
-### - front : webapp
-### - back : java/com/noh/spring
-### - sql : resources/mappers
+### front : webapp
+### back : java/com/noh/spring
+### sql : resources/mappers
 
 ### - 프로젝트 기능
 1. 메인 화면
