@@ -1,3 +1,4 @@
+/* js_header */
 const path = $('#path').val();
 
 $(document).ready(function(){
