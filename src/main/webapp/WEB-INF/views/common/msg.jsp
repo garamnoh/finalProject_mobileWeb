@@ -36,4 +36,4 @@
 		location.replace('${path}${loc}');
 	</script>
 </body>
-</html>
+</html> 
