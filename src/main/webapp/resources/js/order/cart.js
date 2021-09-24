@@ -1,3 +1,4 @@
+/* js_장바구니 */
 // 메뉴 삭제
 $('#cartContainer>#cartList>#deleteCartList').on('click', (e)=>{
 	var cartSeq = $(e.target).parent().prev().val();
