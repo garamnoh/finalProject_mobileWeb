@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="${path }/resources/css/order/payment.css">
 
-<jsp:include page='/WEB-INF/views/common/header.jsp'/>
+<jsp:include page='/WEB-INF/views/common/header.jsp'/> 
 
 <div id="paymentHeader">
     <span id="paymentText">결제</span>
