@@ -1,4 +1,4 @@
-package com.noh.spring.notification.controller;
+package com.noh.spring.notification.controller; 
 
 import java.util.HashMap;
 import java.util.List;
