@@ -1,3 +1,4 @@
+/* js_pc화면 인덱스 */
 const path = $('#path').val();
 
 // 로그인 페이지 이동
