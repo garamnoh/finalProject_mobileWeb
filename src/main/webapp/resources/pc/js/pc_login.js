@@ -1,3 +1,4 @@
+/* js_pc화면 로그인 */
 const path = $('#path').val();
 
 // 사업자 로그인 전환
