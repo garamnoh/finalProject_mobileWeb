@@ -1,3 +1,4 @@
+/* js_주문화면 메뉴 상세정보 */
 // 메뉴 상세정보 보기
 $('#menuOption>.menuList').on('click', (e)=>{
 	var productId;
