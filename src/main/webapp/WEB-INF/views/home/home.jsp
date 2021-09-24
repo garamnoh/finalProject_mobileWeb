@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="${path }/resources/css/home/home.css">
 
 <!-- header.jsp -->
-<jsp:include page='/WEB-INF/views/common/header.jsp'/>
+<jsp:include page='/WEB-INF/views/common/header.jsp'/> 
 
 <!-- 적립 정보 컨테이너 -->
 <div id="rewardContainer">
