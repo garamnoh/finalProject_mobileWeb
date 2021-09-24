@@ -1,3 +1,4 @@
+/* js_비밀번호 찾기 */
 const path = $('#path').val();
 
 /* 취소 버튼 */ const cancelButton = $('#container #cancel');
