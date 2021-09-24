@@ -1,4 +1,4 @@
-package com.noh.spring.business.model.vo;
+package com.noh.spring.business.model.vo; 
 
 import java.sql.Date;
 
