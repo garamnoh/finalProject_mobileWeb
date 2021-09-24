@@ -1,3 +1,4 @@
+/* js_주문화면 메뉴 상세옵션 설정 */
 // 수량 버튼
 $('#amountContainer>img').on('click', (e)=>{
 	var countButton = $(e.target).attr('id');
