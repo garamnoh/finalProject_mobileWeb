@@ -1,4 +1,4 @@
-package com.noh.spring.notification.model.vo;
+package com.noh.spring.notification.model.vo; 
 
 import lombok.Data;
 
