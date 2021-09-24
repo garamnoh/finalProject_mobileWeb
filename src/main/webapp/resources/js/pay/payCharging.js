@@ -1,3 +1,4 @@
+/* js_페이화면 충전 */
 // 충전 금액 선택
 $('#chargingBox>div').children().on('click', (e)=>{
 	var chargingPrice = $(e.target).attr('id');
