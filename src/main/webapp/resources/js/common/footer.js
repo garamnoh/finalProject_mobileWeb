@@ -1,3 +1,4 @@
+/* js_footer */
 // home 접속시 homeBtn focusing
 $(document).ready(function(){
 	var navButton = $('#navButton').val();
