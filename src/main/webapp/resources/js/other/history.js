@@ -1,3 +1,4 @@
+/* js_other화면 결제내역 */
 // 오늘 날짜부터 3개월 기본 설정
 $(document).ready(function(){
 	new Promise(function(resolve, reject){
