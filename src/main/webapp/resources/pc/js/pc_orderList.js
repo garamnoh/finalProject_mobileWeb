@@ -1,3 +1,4 @@
+/* js_pc화면 주문내역 */
 // 자동실행 - 주문번호 리스트 표시
 $(document).ready(function(){
 	$('#businessListContainer #orderNo').trigger('click');
