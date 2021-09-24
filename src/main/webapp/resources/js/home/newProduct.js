@@ -1,3 +1,4 @@
+/* js_새로나온 메뉴 */
 // 메뉴 상세정보 보기
 $('#scrollBox #newProduct').on('click', (e)=>{
 	var productId;
