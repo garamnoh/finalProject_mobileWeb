@@ -1,4 +1,4 @@
-package com.noh.spring.pay.model.vo;
+package com.noh.spring.pay.model.vo; 
 
 import java.sql.Date;
 
