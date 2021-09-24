@@ -1,4 +1,4 @@
-package com.noh.spring.common.navigation;
+package com.noh.spring.common.navigation; 
 
 import javax.servlet.http.HttpSession;
 
