@@ -1,3 +1,4 @@
+/* js_메뉴 즐겨찾기 */
 // 메뉴 상세정보 보기
 $('#favoriteScrollBox #favoriteProduct').on('click', (e)=>{
 	var productId;
