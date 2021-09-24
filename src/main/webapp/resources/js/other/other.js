@@ -1,3 +1,4 @@
+/* js_other화면 */
 // 로그아웃
 $('#logoutButton').on('click', ()=>{
 	location.replace(path + '/member/logout.do');
