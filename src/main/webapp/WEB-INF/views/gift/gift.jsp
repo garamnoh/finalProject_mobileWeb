@@ -17,4 +17,4 @@
 
 <script src='${path }/resources/js/home/home.js'></script>
 
-<jsp:include page='/WEB-INF/views/common/footer.jsp'/>
+<jsp:include page='/WEB-INF/views/common/footer.jsp'/> 
