@@ -1,3 +1,4 @@
+/* js_other화면 결제내역 상세정보(전자영수증) */
 // 영수증
 $('#historyResultContainer>#historyBox').on('click', (e)=>{
 	// 모달창 open
