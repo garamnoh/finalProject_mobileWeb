@@ -6,7 +6,7 @@
 
 <c:set var='path' value='${pageContext.request.contextPath }'/>
 
-<c:forEach var='order' items='${orderList }'>
+<c:forEach var='order' items='${orderList }'> 
     <div id="historyBox">
     	<input type='hidden' value='${order.ORDER_NO }' id='orderNumber'>
         <span id="location"><c:out value='${order.STORE_NAME }'/></span>
