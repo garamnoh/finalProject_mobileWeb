@@ -1,3 +1,4 @@
+/* js_웹소켓 */
 const path1 = $('#path').val();
 
 let sock = new SockJS('http://rclass.iptime.org:9999/21PM_STARBUCKS_final/webSocket');
