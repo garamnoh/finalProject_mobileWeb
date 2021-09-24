@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="${path }/resources/css/order/cart.css">
 
-<jsp:include page='/WEB-INF/views/common/header.jsp'/>
+<jsp:include page='/WEB-INF/views/common/header.jsp'/> 
 
 <div id="cartHeader">
     <span id="cartText">Cart</span>
