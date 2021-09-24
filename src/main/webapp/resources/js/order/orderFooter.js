@@ -1,3 +1,4 @@
+/* js_주문화면 footer(매장찾기 및 장바구니 이동) */
 // 매장찾기 버튼 클릭
 $('#searchLocation').on('click', (e)=>{
 	location.assign(path + '/store/orderLocation.do');
