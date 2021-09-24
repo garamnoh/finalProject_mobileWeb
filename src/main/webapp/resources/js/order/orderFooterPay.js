@@ -1,3 +1,4 @@
+/* js_주문화면 footer(주문정보) */
 $(document).ready(function(){
 	finalOrder();
 });
