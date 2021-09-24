@@ -14,4 +14,4 @@
 	</div>
 </c:forEach>
 
-<script src='${path }/resources/js/home/newProduct.js'></script>
+<script src='${path }/resources/js/home/newProduct.js'></script> 
