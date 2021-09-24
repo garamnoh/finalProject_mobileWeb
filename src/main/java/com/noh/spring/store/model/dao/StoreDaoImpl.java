@@ -1,4 +1,4 @@
-package com.noh.spring.store.model.dao;
+package com.noh.spring.store.model.dao; 
 
 import java.util.HashMap;
 import java.util.List;
