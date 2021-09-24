@@ -1,3 +1,4 @@
+/* js_주문화면 header(메뉴버튼) */
 $(document).ready(function(){
 
 	// 메뉴 버튼
