@@ -33,5 +33,5 @@
     </div>
     <input type='hidden' id='path' value='${path }'>
     <script src='${path }/resources/js/common/footer.js'></script>
-</body>
+</body> 
 </html>
