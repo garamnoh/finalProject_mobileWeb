@@ -24,4 +24,4 @@
 		<span>Error Page</span>
 	</div>
 </body>
-</html>
+</html> 
