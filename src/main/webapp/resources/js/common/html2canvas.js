@@ -1,3 +1,4 @@
+/* js_html2canvas */
 /*!
  * html2canvas 1.2.2 <https://html2canvas.hertzen.com>
  * Copyright (c) 2021 Niklas von Hertzen <https://hertzen.com>
