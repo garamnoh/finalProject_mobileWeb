@@ -23,7 +23,4 @@
 	</div>
 </c:if>
 
-
-
-
 <script src='${path }/resources/js/home/favorite.js'></script>
