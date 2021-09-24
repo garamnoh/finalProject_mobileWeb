@@ -56,4 +56,4 @@
 	var balance = $('#balance').val();
 </script>
 
-<script src='${path }/resources/js/order/paymentTypeStarbucks.js'></script>
+<script src='${path }/resources/js/order/paymentTypeStarbucks.js'></script> 
