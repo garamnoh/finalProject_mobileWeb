@@ -15,4 +15,4 @@
 	<c:if test='${status.count ne notificationList.size() }'>
 		<div class='line'></div>
 	</c:if>
-</c:forEach>
+</c:forEach> 
