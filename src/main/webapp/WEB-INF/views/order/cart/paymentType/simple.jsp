@@ -12,4 +12,4 @@
 	<
 </div>
 
-<script src='${path }/resources/js/order/paymentTypeSimple.js'></script>
+<script src='${path }/resources/js/order/paymentTypeSimple.js'></script> 
