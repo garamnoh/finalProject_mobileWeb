@@ -1,4 +1,4 @@
-package com.noh.spring.order.model.vo;
+package com.noh.spring.order.model.vo; 
 
 import java.sql.Date;
 
