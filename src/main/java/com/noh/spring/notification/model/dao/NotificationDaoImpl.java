@@ -1,4 +1,4 @@
-package com.noh.spring.notification.model.dao;
+package com.noh.spring.notification.model.dao; 
 
 import java.util.HashMap;
 import java.util.List;
