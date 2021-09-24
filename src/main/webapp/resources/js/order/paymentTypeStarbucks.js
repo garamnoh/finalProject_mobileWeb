@@ -1,3 +1,4 @@
+/* js_결제화면 결제수단 스타벅스 */
 $(document).ready(function(){
 	checkBalance();
 });
