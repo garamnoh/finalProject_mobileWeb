@@ -1,3 +1,4 @@
+/* js_페이화면 카드 선택 */
 // 카드 선택
 $('#myCardInfoContainer #cardImg').on('click', (e)=>{
 	var cardSeq = $(e.target).prev().val();
