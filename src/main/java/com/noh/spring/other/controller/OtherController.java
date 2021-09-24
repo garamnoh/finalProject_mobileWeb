@@ -1,4 +1,4 @@
-package com.noh.spring.other.controller;
+package com.noh.spring.other.controller; 
 
 import java.sql.Date;
 import java.util.HashMap;
