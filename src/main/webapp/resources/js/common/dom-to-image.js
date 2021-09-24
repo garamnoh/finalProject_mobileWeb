@@ -1,3 +1,4 @@
+/* js_dom-to-image */
 (function (global) {
     'use strict';
 
