@@ -1,3 +1,4 @@
+/* js_주문화면 매장정보 */
 // 스토어 버튼 클릭 -> orderFooter에 반영
 $('#searchResultContainer .resultBox').on('click', (e)=>{
 	var store;
