@@ -1,4 +1,4 @@
-package com.noh.spring.business.model.vo;
+package com.noh.spring.business.model.vo; 
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
