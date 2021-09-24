@@ -1,3 +1,4 @@
+/* js_주문화면 메뉴 음료 상세 */
 $('.menuList').on('click', (e)=>{
 	var menu;
 	if($(e.target).attr('class')=='menuList') menu = $(e.target).attr('id');
