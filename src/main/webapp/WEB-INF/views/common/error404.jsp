@@ -6,7 +6,7 @@
 
 <c:set var='path' value='${pageContext.request.contextPath }'/>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 <meta charset="UTF-8">
