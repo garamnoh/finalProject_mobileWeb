@@ -1,3 +1,4 @@
+/* js_페이화면 */
 // 카드 등록 화면으로 이동
 $('.cardEmpty').on('click', ()=>{
 	location.assign(path + '/pay/moveToRegistCardPage.do');
